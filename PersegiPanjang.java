@@ -1,25 +1,31 @@
 import java.util.Scanner;
 public class PersegiPanjang {
-	public static void LuasPersegi(){
-	int panjang , lebar ;
-       int Luas;
-	Luas = panjang * lebar;
-   }
-	public static void KelilingPersegi(){
-	int panjang, lebar ;
-       int Keliling ;
-	 Keliling = 2*(panjang + lebar);
-   }
-	
     public static void main (String [] args) {
           Scanner nilai = new Scanner (System.in);
-          int panjang , lebar ;
-          System.out.print("Masukan panjang = ");
+		int panjang , lebar, pilihan ;
+ 	  System.out.print("Masukan panjang = ");
           panjang = nilai.nextInt();
           System.out.print("Masukan lebar = ");
           lebar = nilai.nextInt();
-          
-          System.out.println("Luas Persegi Panjang = "+LuasPersegi());
-          System.out.println("Keliling Persegi Panjang = "+KelilingPersegi());
+	  System.out.print("Masukan Pilihan = ");
+          pilihan = nilai.nextInt();
+          if (pilihan == 1){
+		int Luas;
+		Luas = panjang * lebar;
+		LuasPersegi();
+		System.out.println(+Luas);
+	  }else if (pilihan == 2){
+		int Keliling;
+	 	Keliling = 2*(panjang + lebar);
+		KelilingPersegi();
+		System.out.println(+Keliling);
+	  }else {System.out.println("Maaf Angka tidak terdeteksi");
+	  }
     }
+		public static void LuasPersegi(){
+		System.out.print("Luas Persegi Panjang = ");
+   	}
+	public static void KelilingPersegi(){
+		System.out.print("Keliling Persegi Panjang = ");
+   	}
 }
